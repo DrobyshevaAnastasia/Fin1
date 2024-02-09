@@ -22,3 +22,45 @@
 ***
 
 ## **Решение**
+
+```
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Insert numbers of words");
+        int cnt = int.Parse(Console.ReadLine());
+        string[] slova = new string[cnt];
+
+        for (int i = 0; i < cnt; i++)
+        {
+            Console.WriteLine($"Insert word {i + 1}");
+            string word = Console.ReadLine();
+            slova[i] = word;
+        }
+
+        int newLen = 0;
+        for (int i = 0; i < cnt; i++)
+        {
+            if (slova[i].Length <= 3) 
+                newLen++;
+        }
+
+        string[] newArray = new string[newLen];
+        int idx = 0;
+        Console.WriteLine("Result list ");
+        for (int i = 0; i < slova.Length; i++)
+        {
+            if (slova[i].Length <= 3)
+            {
+                newArray[idx] = slova[i];
+                Console.WriteLine(newArray[idx]);
+                idx++;
+            }
+        }
+    }
+}
+
+```
+
