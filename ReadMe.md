@@ -69,4 +69,4 @@ class Program
 
 **Скрин моих коммитов:**
 
-![alt text](image.png)
+![alt text](image-1.png)
